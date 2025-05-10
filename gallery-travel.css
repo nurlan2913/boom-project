@@ -1,0 +1,117 @@
+
+body {
+    margin-left: 0px;
+    margin-right: 0px;
+    background-color:white;
+    /* overflow: none; */
+
+}
+
+.navigation {
+    display: flex;
+    position: fixed;
+    width: 100%;
+    height: 50px;
+    justify-content:space-between; 
+    align-items: center;
+    gap: 30px;
+    margin-top: -70px;
+    background-color: white;
+    box-shadow: 1px 2px 6px #575757;
+   
+   /* z-index: 1; */
+}
+.navigation nav {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    border-left: 1px solid;
+    width: 25%;
+    height: 100%;
+    justify-content: end;
+    padding-right: 10px;
+}
+.navigation .nav-item {
+    font-size: 20px;
+    margin: 10px;
+    font-family: "Aboreto", system-ui; 
+  font-weight: 400;
+  font-style: normal;
+}
+
+.navigation .nav-item a {
+    text-decoration: none;
+    color: black;
+}
+.navigation .nav-item img {
+    width: 30px;
+    height: 30px;
+    background-color:none;
+}
+.navigation h1 {
+    margin-left: 20px;
+    font-family: "Aboreto", system-ui; 
+    font-weight: 600;
+    font-style: normal;
+}
+main {
+   display: flex;
+   justify-items: center;
+   align-items: center;
+   justify-content: center;
+   margin-top: 70px;
+   /* border: solid; */
+}
+main .gallery {
+    display: grid;
+    grid-template-columns: 300px 300px 300px 300px;
+    grid-template-rows: 400px 400px 400px 400px 400px 400px 400px 400px 400px 400px;
+    gap: 20px;
+}
+main .gallery img {
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    box-shadow: 1px 2px 6px #575757;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0,0,0,0.8);
+}
+
+.modal-content {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+@media ( max-width:768px) {
+    .navigation nav {
+        border: none;
+    }   
+    main {
+        margin-left: 10px;
+        margin-right: 10px;
+    }
+    main .gallery {
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px 500px ;
+    }
+}
